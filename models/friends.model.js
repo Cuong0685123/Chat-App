@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 const friendSchema = new mongoose.Schema(
     {
         senderId: {
-            type: String,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
             required: true,
           },
           reciverId: {
-            type: String,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
             required: true,
           },
           status: {

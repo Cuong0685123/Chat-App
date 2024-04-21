@@ -23,6 +23,11 @@ const messageSchema = new mongoose.Schema(
             createdAt: {
             type: Date,
           },
+          senderId:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            required: true,
+          },
         },
         {timestamps: true}
       );
