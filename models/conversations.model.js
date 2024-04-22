@@ -4,20 +4,19 @@ const conversationSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
     },
-    messagesId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Messages",
-      required: true,
-    },
+    messages: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Message",
+            default: [],
+        },
     avatar: {
       type: String,
-      required: true,
     },
     admin: {
-      type: String,
-      require: true,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
     },
     members: {
       type: mongoose.Schema.Types.ObjectId,

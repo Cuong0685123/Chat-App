@@ -9,7 +9,6 @@ const friendSchema = new mongoose.Schema({
   reciverId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true,
   },
   status: {
     type: String,
