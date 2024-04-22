@@ -6,17 +6,17 @@ const conversationSchema = new mongoose.Schema(
       type: String,
     },
     messages: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Message",
-            default: [],
-        },
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Message",
+      default: [String],
+    },
     avatar: {
       type: String,
     },
     admin: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
     members: {
       type: mongoose.Schema.Types.ObjectId,
